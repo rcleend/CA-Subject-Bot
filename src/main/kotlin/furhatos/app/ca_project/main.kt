@@ -4,9 +4,9 @@ import furhatos.app.ca_project.flow.*
 import furhatos.skills.Skill
 import furhatos.flow.kotlin.*
 
-class Ca_projectSkill : Skill() {
+class SubjectSkill : Skill() {
     override fun start() {
-        Flow().run(Idle)
+        Flow().run(Start)
     }
 }
 
