@@ -45,6 +45,8 @@ repositories {
 
 dependencies {
     compile 'com.furhatrobotics.furhatos:furhat-commons:2.2.0'
+    implementation 'edu.stanford.nlp:stanford-corenlp:4.4.0'
+    implementation 'edu.stanford.nlp:stanford-corenlp:4.4.0:models'
 }
 
 jar {
