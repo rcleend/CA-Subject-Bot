@@ -1,50 +1,52 @@
 package furhatos.app.ca_project.nlu.intents
 
+import furhatos.app.ca_project.nlu.LisaNameEntity
 import furhatos.app.ca_project.nlu.LisaSawEntity
 import furhatos.nlu.Intent
+import furhatos.nlu.WildcardEntity
 import furhatos.util.Language
 
 // Lisa Intents
-class RequestAboutLisa(): Intent() {
+class FillerEntityRequest: WildcardEntity("filler", RequestAboutLisa())
+class RequestAboutLisa(val name: LisaNameEntity? = null,
+                       val filler: FillerEntityRequest? = null
+): Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf(
-            "could you please tell me about lisa?",
-            "tell me about Lisa",
-            "do you know lisa?",
-            "could you please tell me if you know lisa",
-            "where do you know lisa from?",
-            "could you please tell me about liza?",
-            "tell me about Liza",
-            "do you know liza?",
-            "could you please tell me if you know liza",
-            "where do you know liza from?"
+            "could you please tell me about @name",
+            "what can you tell me about @name",
+            "tell me about @name",
+            "do you know @name",
+            "have you seen @name",
+            "could you please tell me if you know @name",
+            "where do you know @name from",
+            "who is @filler on the stairs"
         )
     }
 }
 
-class LisaSawThis (val topic: LisaSawEntity? = null): Intent() {
+class FillerEntityLisaSaw: WildcardEntity("filler", LisaSawThis())
+class LisaSawThis (val name: LisaNameEntity? = null,
+                   val topic: LisaSawEntity? = null,
+                   val filler: FillerEntityLisaSaw? = null
+): Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf(
-            "why lisa told me you @topic",
-            "why liza told me you @topic",
-            "Could you tell me why you @topic",
-            "Did you @topic"
+            "@name told me you @topic",
+            "@name saw you @filler outside",
+            "@name saw you @filler ball",
+            "she saw you @filler"
         )
     }
 }
 
 
-class LisaDoll (): Intent() {
+class LisaDoll (val name: LisaNameEntity? = null, val topic: LisaSawEntity? = null): Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf(
-            "about Lisa's doll",
-            "about Liza's doll",
-
-            "Lisa playing with",
-            "Liza playing with",
-
-            "like Lisa doll",
-            "like Liza doll"
+            "about @name's doll",
+            "@name playing with",
+            "like @name doll"
         )
     }
 }
