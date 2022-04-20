@@ -59,6 +59,7 @@ class RequestAboutNoise(
     }
 }
 
+//The intent was commented to prevent misunderstandings
 //class RequestAboutCrash(val broke: BreakEntity? = null): Intent() {
 //    override fun getExamples(lang: Language): List<String> {
 //        return listOf(

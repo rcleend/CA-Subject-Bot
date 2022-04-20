@@ -34,8 +34,8 @@ enum class RuleDimensions: RuleDimensionInterface {
     X2Y2 {
        override fun get(): Ruleset {
            return Ruleset(arrayOf(
-               Triple(PersonalityDimTypes.HAPPINESS, RuleOperator.LARGER_OR_EQUAL, 0.66),
-               Triple(PersonalityDimTypes.TRUTHFULNESS, RuleOperator.LARGER_OR_EQUAL, 0.66)
+               Triple(PersonalityDimTypes.HAPPINESS, RuleOperator.LARGER_OR_EQUAL, 0.72),
+               Triple(PersonalityDimTypes.TRUTHFULNESS, RuleOperator.LARGER_OR_EQUAL, 0.72)
            ))
        }
    },
@@ -43,7 +43,7 @@ enum class RuleDimensions: RuleDimensionInterface {
         override fun get(): Ruleset {
             return Ruleset(arrayOf(
                 Triple(PersonalityDimTypes.HAPPINESS, RuleOperator.LARGER_OR_EQUAL, 0.33),
-                Triple(PersonalityDimTypes.TRUTHFULNESS, RuleOperator.LARGER_OR_EQUAL, 0.66)
+                Triple(PersonalityDimTypes.TRUTHFULNESS, RuleOperator.LARGER_OR_EQUAL, 0.72)
             ))
         }
     },
@@ -51,14 +51,14 @@ enum class RuleDimensions: RuleDimensionInterface {
         override fun get(): Ruleset {
             return Ruleset(arrayOf(
                 Triple(PersonalityDimTypes.HAPPINESS, RuleOperator.LARGER_OR_EQUAL, 0.0),
-                Triple(PersonalityDimTypes.TRUTHFULNESS, RuleOperator.LARGER_OR_EQUAL, 0.66)
+                Triple(PersonalityDimTypes.TRUTHFULNESS, RuleOperator.LARGER_OR_EQUAL, 0.72)
             ))
         }
     },
     X2Y0 {
         override fun get(): Ruleset {
             return Ruleset(arrayOf(
-                Triple(PersonalityDimTypes.HAPPINESS, RuleOperator.LARGER_OR_EQUAL, 0.66),
+                Triple(PersonalityDimTypes.HAPPINESS, RuleOperator.LARGER_OR_EQUAL, 0.72),
                 Triple(PersonalityDimTypes.TRUTHFULNESS, RuleOperator.LARGER_OR_EQUAL, 0.0)
             ))
         }
@@ -66,7 +66,7 @@ enum class RuleDimensions: RuleDimensionInterface {
     X2Y1 {
         override fun get(): Ruleset {
             return Ruleset(arrayOf(
-                Triple(PersonalityDimTypes.HAPPINESS, RuleOperator.LARGER_OR_EQUAL, 0.66),
+                Triple(PersonalityDimTypes.HAPPINESS, RuleOperator.LARGER_OR_EQUAL, 0.72),
                 Triple(PersonalityDimTypes.TRUTHFULNESS, RuleOperator.LARGER_OR_EQUAL, 0.33)
             ))
         }

@@ -46,13 +46,18 @@ class HowAreYouDoing (): Intent() {
     }
 }
 
-class Truth (): Intent() {
+class Truthful (): Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf(
             "tell the truth",
             "say the truth",
+            "speak the truth",
             "be truthful",
-            "don't lie"
+            "don't lie",
+            "you should not lie",
+            "lying is bad",
+            "lying never helped",
+            "lying never helps"
         )
     }
 }

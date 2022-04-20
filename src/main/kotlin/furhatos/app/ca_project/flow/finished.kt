@@ -8,6 +8,6 @@ import furhatos.flow.kotlin.state
 val Finished : State = state {
 
     onEntry {
-        furhat.say("...Good job! You completed the scenario.")
+        furhat.say("...Im going to ask dad if he can help paying for the window... See you later.")
     }
 }
