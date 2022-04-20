@@ -1,0 +1,63 @@
+{
+  "class": "furhatos.gestures.Gesture",
+  "_comment": "frameLength = 30  timePadding = 500 articulationMod = 1.0 speedMod = 1.0  file = x1y1_2_iPhone_13_mini",
+  "defaultPriority": 0,
+  "name": "x1y1",
+  "frames": [
+    {
+      "time": [
+        0.5
+      ],
+      "params": {
+        "EYE_BLINK_LEFT": 0.0,
+        "EYE_BLINK_RIGHT": 0.0,
+        "EYE_LOOK_DOWN_LEFT": 0.1,
+        "EYE_LOOK_DOWN_RIGHT": 0.1,
+        "EYE_WIDE_LEFT": 0.25,
+        "EYE_WIDE_RIGHT": 0.25,
+        "BROW_INNER_UP": 0.71,
+        "BROW_OUTER_UP_LEFT": 0.44,
+        "BROW_OUTER_UP_RIGHT": 0.44,
+        "MOUTH_SMILE_LEFT": 0.12,
+        "MOUTH_SMILE_RIGHT": 0.0,
+        "MOUTH_LEFT": 0.13,
+        "MOUTH_STRETCH_LEFT": 0.16,
+        "MOUTH_STRETCH_RIGHT": 0.13,
+        "CHEEK_SQUINT_LEFT": 0.12,
+        "CHEEK_SQUINT_RIGHT": 0.1
+      }
+    },
+    {
+      "time": [
+        0.6
+      ],
+      "params": {
+        "MOUTH_SHRUG_UPPER": 0.08
+      }
+    },
+    {
+      "time": [
+        1.535
+      ],
+      "params": {
+        "BROW_INNER_UP": 0.67
+      }
+    },
+    {
+      "time": [
+        1.869
+      ],
+      "params": {
+        "MOUTH_LOWER_DOWN_RIGHT": 0.12
+      }
+    },
+    {
+      "time": [
+        3.134
+      ],
+      "params": {
+        "reset": true
+      }
+    }
+  ]
+}
