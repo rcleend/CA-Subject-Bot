@@ -11,12 +11,12 @@ val Ball = partialState {
 
     onResponse<KnowBallColor>{
 
-        InterpersonalState.update(QuestionFrame(it.text.toString(), true))
+        InterpersonalState.update(QuestionFrame(it.text.toString(), false))
 
         val rf = ResponseFrame(arrayOf(
             ResponseValues(RuleDimensions.X2Y2.get(), X2Y2, "Oh no. I confess: the red ball is mine. I broke the window. Mom will be mad.", Finished),
             ResponseValues(RuleDimensions.X2Y1.get(), X2Y1, "It was the little Lisa who told me that there was a red ball in the courtyard."),
-            ResponseValues(RuleDimensions.X2Y0.get(), X2Y0, "Just luck, ahah."),
+            ResponseValues(RuleDimensions.X2Y0.get(), X2Y0, "Just luck, ahahah."),
             ResponseValues(RuleDimensions.X1Y2.get(), X1Y2, "Oh no. I confess: the red ball is mine. I broke the window, but please don't tell mom!", Finished),
             ResponseValues(RuleDimensions.X1Y1.get(), X1Y1, "Lisa told me that there was a red ball in the courtyard."),
             ResponseValues(RuleDimensions.X1Y0.get(), X1Y0, "There was a big discount of red balls at the sport shop yesterday, I just assumed."),

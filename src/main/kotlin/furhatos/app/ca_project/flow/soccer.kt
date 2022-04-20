@@ -13,7 +13,7 @@ val Soccer = partialState {
 
     onResponse<Training>{
 
-        InterpersonalState.update(QuestionFrame(it.text.toString(), true))
+        InterpersonalState.update(QuestionFrame(it.text.toString(), false))
 
         val rf = ResponseFrame(arrayOf(
             ResponseValues(RuleDimensions.X2Y2.get(), X2Y2, "Today that is Tuesday... and on Thursday. It's nice because I see my friends, but I would like to train more often."),
@@ -39,7 +39,7 @@ val Soccer = partialState {
 
     onResponse<WhyThoseClothes>{
 
-        InterpersonalState.update(QuestionFrame(it.text.toString(), true))
+        InterpersonalState.update(QuestionFrame(it.text.toString(), false))
 
         val rf = ResponseFrame(arrayOf(
             ResponseValues(RuleDimensions.X2Y2.get(), X2Y2, "I want to warm up before my friends arrive. We have a match against the kids from the other block this Saturday."),
@@ -65,7 +65,7 @@ val Soccer = partialState {
 
     onResponse<WhatAreYouWearing>{
 
-        InterpersonalState.update(QuestionFrame(it.text.toString(), true))
+        InterpersonalState.update(QuestionFrame(it.text.toString(), false))
 
         val rf = ResponseFrame(arrayOf(
             ResponseValues(RuleDimensions.X2Y2.get(), X2Y2, "I'm wearing Lukaku's t-shirt, which is my favorite player and football shoes."),

@@ -1,7 +1,9 @@
 package furhatos.app.ca_project.flow
 
+import furhatos.app.ca_project.nlu.intents.LisaDoll
 import furhatos.flow.kotlin.State
 import furhatos.flow.kotlin.furhat
+import furhatos.flow.kotlin.onResponse
 import furhatos.flow.kotlin.state
 
 
@@ -14,12 +16,11 @@ val Idle : State = state {
     include(Soccer)
 
     onEntry {
-        furhat.say("Hey. Whats up?")
+        furhat.say("Hey. Whats up")
         furhat.listen(timeout = 10000)
     }
 
     onReentry {
         furhat.listen(timeout = 10000)
-//        After time out: ask "Why are you staring at me?" or "Did you say something?"
     }
 }

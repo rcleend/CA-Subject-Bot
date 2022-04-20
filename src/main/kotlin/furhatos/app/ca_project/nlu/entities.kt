@@ -33,3 +33,15 @@ class BreakEntity: EnumEntity() {
         return listOf("break", "crash", "smashed", "cracked", "go through", "destroyed", "broken", "broke")
     }
 }
+
+class SoccerEntity: EnumEntity() {
+    override fun getEnum(lang: Language): List<String> {
+        return listOf("football", "soccer")
+    }
+}
+
+class TrainingEntity: EnumEntity() {
+    override fun getEnum(lang: Language): List<String> {
+        return listOf("training", "practice")
+    }
+}

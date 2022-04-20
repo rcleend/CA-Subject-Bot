@@ -13,7 +13,7 @@ val Bjorn = partialState {
 
     onResponse<RequestAboutHomework>{
 
-        InterpersonalState.update(QuestionFrame(it.text.toString(), true))
+        InterpersonalState.update(QuestionFrame(it.text.toString(), false))
 
         val rf = ResponseFrame(arrayOf(
             ResponseValues(RuleDimensions.X2Y2.get(), X2Y2, "I need to finish my homework, but my mom is at work. I'll do them later. Because my friends will come soon to play football together, so I need to warm up. We need to train for a game."),
@@ -39,7 +39,7 @@ val Bjorn = partialState {
 
     onResponse<FriendsMatch>{
 
-        InterpersonalState.update(QuestionFrame(it.text.toString(), true))
+        InterpersonalState.update(QuestionFrame(it.text.toString(), false))
 
         val rf = ResponseFrame(arrayOf(
             ResponseValues(RuleDimensions.X2Y2.get(), X2Y2, "Me and my friends have been challenged this Saturday by the kids from the other block. They didn't realize what error was it yet. But we need to train. I hope they have a ball."),
@@ -76,6 +76,32 @@ val Bjorn = partialState {
             ResponseValues(RuleDimensions.X0Y2.get(), X0Y2, "I'm... I'm... uhmm... ok..."),
             ResponseValues(RuleDimensions.X0Y1.get(), X0Y1, "I'm ok..."),
             ResponseValues(RuleDimensions.X0Y0.get(), X0Y0, "I'm good...")
+        ))
+
+        val (gesture, response, state) = rf.getResponse()
+        furhat.gesture(gesture, async = true)
+        furhat.say(response)
+
+        if (state != null) goto(state)
+
+        reentry()
+    }
+
+
+    onResponse<HowAreYouDoing>{
+
+        InterpersonalState.update(QuestionFrame(it.text.toString(), false))
+
+        val rf = ResponseFrame(arrayOf(
+            ResponseValues(RuleDimensions.X2Y2.get(), X2Y2, "My mother say that lying is wrong... You're right, it was me who broke the window.", Finished),
+            ResponseValues(RuleDimensions.X2Y1.get(), X2Y1, "My mom say that lying is wrong... I might be involved in the accident...", Finished),
+            ResponseValues(RuleDimensions.X2Y0.get(), X2Y0, "I like to tell the truth."),
+            ResponseValues(RuleDimensions.X1Y2.get(), X1Y2, "The truth is that I broke your window kicking the ball. I'm so sorry!", Finished),
+            ResponseValues(RuleDimensions.X1Y1.get(), X1Y1, "My mother say that lying is wrong... but what does she knows about that?"),
+            ResponseValues(RuleDimensions.X1Y0.get(), X1Y0, "I speak the truth, I never lie."),
+            ResponseValues(RuleDimensions.X0Y2.get(), X0Y2, "Mom always say that lying is bad, but telling the truth sometimes is not easy."),
+            ResponseValues(RuleDimensions.X0Y1.get(), X0Y1, "I know that telling the truth is important but it's very hard sometimes."),
+            ResponseValues(RuleDimensions.X0Y0.get(), X0Y0, "I always speak the truth and never lie.")
         ))
 
         val (gesture, response, state) = rf.getResponse()

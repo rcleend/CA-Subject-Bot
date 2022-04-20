@@ -17,7 +17,7 @@ class QuestionFrame(utterance: String, isNegAssumption: Boolean = false) {
     init {
         val sentimentAnalysis = SentimentAnalysis()
         val questionAnalysis = QuestionAnalysis()
-        this._sentiment = Utilities.map(sentimentAnalysis.analyse(utterance).toDouble(), 0.0, 4.0, -1.0, 1.0)
+        this._sentiment = Utilities.map(sentimentAnalysis.analyse(utterance).toDouble(), 0.0, 4.0, -2.0, 2.0)
         this._questionType = questionAnalysis.analyse(utterance)
         this._isNegAssumption = isNegAssumption
     }

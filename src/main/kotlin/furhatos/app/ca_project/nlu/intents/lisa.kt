@@ -1,5 +1,6 @@
 package furhatos.app.ca_project.nlu.intents
 
+import furhatos.app.ca_project.nlu.BreakEntity
 import furhatos.app.ca_project.nlu.LisaNameEntity
 import furhatos.app.ca_project.nlu.LisaSawEntity
 import furhatos.nlu.Intent
@@ -22,7 +23,9 @@ class RequestAboutLisa(val name: LisaNameEntity? = null,
             "could you please tell me if you know @name",
             "where do you know @name from",
             "who is @filler on the stairs",
-            "could you explain why @name"
+            "could you explain why @name",
+            "can you tell me about lisa",
+            "do you like @name"
         )
     }
 }
@@ -42,14 +45,16 @@ class LisaSawThis (val name: LisaNameEntity? = null,
             "saw what you did",
             "@name saw what you did",
             "you have been seen by @name",
-            "betrayed you"
+            "betrayed you",
+            "told me you threw the ball"
         )
     }
 }
 
+class FillerEntityLisaDoll: WildcardEntity("filler", LisaDoll())
 class LisaDoll (val name: LisaNameEntity? = null,
                 val topic: LisaSawEntity? = null,
-                val filler: FillerEntityRequest? = null
+                val filler: FillerEntityLisaDoll? = null
 ): Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf(
@@ -64,4 +69,3 @@ class LisaDoll (val name: LisaNameEntity? = null,
         )
     }
 }
-

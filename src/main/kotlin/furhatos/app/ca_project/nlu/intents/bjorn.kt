@@ -7,9 +7,9 @@ import furhatos.util.Language
 class RequestAboutHomework(): Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf(
-            "did you already do",
-            "did you finish",
-            "what will your mother say about",
+            "did you already do your homework",
+            "did you finish your homework",
+            "what will your mother say about you not doing your homework",
             "the teacher",
             "homework"
         )
@@ -39,7 +39,20 @@ class HowAreYouDoing (): Intent() {
             "how are you",
             "what's up",
             "how do you feel",
-            "is everything all right"
+            "is everything all right",
+            "how are you feeling",
+            "how you are feeling"
+        )
+    }
+}
+
+class Truth (): Intent() {
+    override fun getExamples(lang: Language): List<String> {
+        return listOf(
+            "tell the truth",
+            "say the truth",
+            "be truthful",
+            "don't lie"
         )
     }
 }

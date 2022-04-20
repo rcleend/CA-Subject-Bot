@@ -2,9 +2,7 @@ package furhatos.app.ca_project.flow
 
 import furhatos.app.ca_project.gestures.*
 import furhatos.app.ca_project.models.*
-import furhatos.app.ca_project.nlu.intents.LisaSawThis
-import furhatos.app.ca_project.nlu.intents.RequestAboutLisa
-import furhatos.app.ca_project.nlu.intents.LisaDoll
+import furhatos.app.ca_project.nlu.intents.*
 import furhatos.app.ca_project.setting.InterpersonalState
 import furhatos.flow.kotlin.*
 
@@ -39,18 +37,18 @@ val Lisa = partialState {
 
     onResponse<RequestAboutLisa>{
 
-        InterpersonalState.update(QuestionFrame(it.text.toString(), true))
+        InterpersonalState.update(QuestionFrame(it.text.toString(), false))
 
         val rf = ResponseFrame(arrayOf(
-            ResponseValues(RuleDimensions.X2Y2.get(), X2Y2, "Lisa is the little daughter of the marshal living on the first floor. She always plays with her doll. Why are you asking me? Don’t you know her?"),
-            ResponseValues(RuleDimensions.X2Y1.get(), X2Y1, "Lisa is the daughter of the marshal who lives on the first floor. Why are you asking?"),
-            ResponseValues(RuleDimensions.X2Y0.get(), X2Y0, "I don't know who this Lisa is. Why are you asking me?"),
-            ResponseValues(RuleDimensions.X1Y2.get(), X1Y2, "Lisa is the daughter of the marshal living on the first floor. She always plays with her doll. Why are you asking me? Don’t you know her?"),
-            ResponseValues(RuleDimensions.X1Y1.get(), X1Y1, "Lisa is the kid that lives on the first floor. Why are you asking?"),
-            ResponseValues(RuleDimensions.X1Y0.get(), X1Y0, "I don't know who this Lisa is. Who is she?"),
-            ResponseValues(RuleDimensions.X0Y2.get(), X0Y2, "Lisa is the dumb daughter of the marshal who lives on the first floor. She always plays with her doll. Why are you asking me? Don’t you know her?"),
-            ResponseValues(RuleDimensions.X0Y1.get(), X0Y1, "Lisa is the kid that lives on the first floor. Why?"),
-            ResponseValues(RuleDimensions.X0Y0.get(), X0Y0, "I don't know who she is. Why should I care anyway?")
+            ResponseValues(RuleDimensions.X2Y2.get(), X2Y2, "Lisa is the little daughter of the marshal living on the first floor. She always plays with her doll."),
+            ResponseValues(RuleDimensions.X2Y1.get(), X2Y1, "Lisa is the daughter of the marshal who lives on the first floor."),
+            ResponseValues(RuleDimensions.X2Y0.get(), X2Y0, "I don't know who this Lisa is."),
+            ResponseValues(RuleDimensions.X1Y2.get(), X1Y2, "Lisa is the daughter of the marshal living on the first floor. She always plays with her doll."),
+            ResponseValues(RuleDimensions.X1Y1.get(), X1Y1, "Lisa is the kid that lives on the first floor. "),
+            ResponseValues(RuleDimensions.X1Y0.get(), X1Y0, "I don't know who this Lisa is."),
+            ResponseValues(RuleDimensions.X0Y2.get(), X0Y2, "Lisa is the dumb daughter of the marshal who lives on the first floor. She always plays with her doll."),
+            ResponseValues(RuleDimensions.X0Y1.get(), X0Y1, "Lisa is the kid that lives on the first floor."),
+            ResponseValues(RuleDimensions.X0Y0.get(), X0Y0, "I don't know who she is.")
         ))
 
         val (gesture, response, state) = rf.getResponse()
@@ -65,7 +63,7 @@ val Lisa = partialState {
 
     onResponse<LisaDoll>{
 
-        InterpersonalState.update(QuestionFrame(it.text.toString(), true))
+        InterpersonalState.update(QuestionFrame(it.text.toString(), false))
 
         val rf = ResponseFrame(arrayOf(
             ResponseValues(RuleDimensions.X2Y2.get(), X2Y2, "It's a nice doll, I guess, but when I see it, I shiver. It's scary! I don't like dolls; I very much prefer to play football."),

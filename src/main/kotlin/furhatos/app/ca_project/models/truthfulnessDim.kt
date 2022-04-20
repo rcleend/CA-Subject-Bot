@@ -12,7 +12,7 @@ class TruthfulnessDim(initValue: Double): PersonalityDim(initValue) {
                 if (InterpersonalState.personalityDims[PersonalityDimTypes.TRUTHFULNESS]!!.value >= 0.5) 2
                 else -2
             }
-            QuestionType.COUNTER_PRODUCTIVE -> -2
+            QuestionType.COUNTER_PRODUCTIVE -> -1
         }
 
         val neg = if (qf.isNegAssumption) 1 else 0
