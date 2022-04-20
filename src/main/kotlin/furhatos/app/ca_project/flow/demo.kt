@@ -10,7 +10,7 @@ import furhatos.flow.kotlin.onResponse
 import furhatos.flow.kotlin.state
 
 
-val Start : State = state(Interaction) {
+val Demo : State = state(Interaction) {
 
     onEntry {
         furhat.ask("Hi there")

@@ -5,7 +5,7 @@ import furhatos.util.Language
 
 
 // Accident Intents
-class RequestAboutAccident(): Intent() {
+class Training(): Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf(
             "",
@@ -14,7 +14,7 @@ class RequestAboutAccident(): Intent() {
     }
 }
 
-class RequestAboutNoise(): Intent() {
+class WhyThoseClothes(): Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf(
             "",
@@ -23,9 +23,10 @@ class RequestAboutNoise(): Intent() {
     }
 }
 
-class RequestAboutCrash(): Intent() {
+class WhatAreYouWearing(): Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf(
+            "What are you wearing?",
             "",
             ""
         )

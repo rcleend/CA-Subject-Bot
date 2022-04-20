@@ -3,9 +3,8 @@ package furhatos.app.ca_project.nlu
 import furhatos.nlu.Intent
 import furhatos.util.Language
 
-
-// Accident Intents
-class RequestAboutAccident(): Intent() {
+// Bjorn Intents
+class RequestAboutHomework(): Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf(
             "",
@@ -14,16 +13,8 @@ class RequestAboutAccident(): Intent() {
     }
 }
 
-class RequestAboutNoise(): Intent() {
-    override fun getExamples(lang: Language): List<String> {
-        return listOf(
-            "",
-            ""
-        )
-    }
-}
 
-class RequestAboutCrash(): Intent() {
+class FriendsMatch (): Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf(
             "",
