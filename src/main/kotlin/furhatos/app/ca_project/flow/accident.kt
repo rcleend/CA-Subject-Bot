@@ -20,7 +20,7 @@ val Accident = partialState {
             ResponseValues(RuleDimensions.X2Y1.get(), X2Y1, "I'm sorry but I saw nothing."),
             ResponseValues(RuleDimensions.X2Y0.get(), X2Y0, "I just got out; I saw nothing."),
             ResponseValues(RuleDimensions.X1Y2.get(), X1Y2, "It was an accident, I'm sorry!", Finished),
-            ResponseValues(RuleDimensions.X1Y1.get(), X1Y1, "I saw nothing."),
+            ResponseValues(RuleDimensions.X1Y1.get(), X1Y1, "I don't know anything."),
             ResponseValues(RuleDimensions.X1Y0.get(), X1Y0, "I don’t know what are you talking about."),
             ResponseValues(RuleDimensions.X0Y2.get(), X0Y2, "Should I have seen something?"),
             ResponseValues(RuleDimensions.X0Y1.get(), X0Y1, "I just got out; I saw nothing. "),
