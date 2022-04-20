@@ -24,12 +24,27 @@ class RequestAboutLisa(): Intent() {
 class LisaSawThis (val topic: LisaSawEntity? = null): Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf(
-            "Could you explain why lisa told me you @topic",
-            "Could you explain why liza told me you @topic",
+            "why lisa told me you @topic",
+            "why liza told me you @topic",
             "Could you tell me why you @topic",
             "Did you @topic"
         )
     }
 }
 
+
+class LisaDoll (): Intent() {
+    override fun getExamples(lang: Language): List<String> {
+        return listOf(
+            "about Lisa's doll",
+            "about Liza's doll",
+
+            "Lisa playing with",
+            "Liza playing with",
+
+            "like Lisa doll",
+            "like Liza doll"
+        )
+    }
+}
 
