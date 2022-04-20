@@ -1,0 +1,39 @@
+{
+  "class": "furhatos.gestures.Gesture",
+  "_comment": "frameLength = 30  timePadding = 500 articulationMod = 1.0 speedMod = 1.0  file = x0y1",
+  "defaultPriority": 0,
+  "name": "x0y1",
+  "frames": [
+    {
+      "time": [
+        0.5
+      ],
+      "params": {
+        "EYE_SQUINT_LEFT": 0.42,
+        "EYE_SQUINT_RIGHT": 0.42,
+        "BROW_INNER_UP": 0.09,
+        "BROW_OUTER_UP_LEFT": 0.0,
+        "BROW_OUTER_UP_RIGHT": 0.0,
+        "BROW_DOWN_LEFT": 0.77,
+        "BROW_DOWN_RIGHT": 0.77,
+        "JAW_FORWARD": 0.04,
+        "JAW_OPEN": 0.03,
+        "MOUTH_FROWN_LEFT": 0.1,
+        "MOUTH_FROWN_RIGHT": 0.11,
+        "MOUTH_STRETCH_LEFT": 0.08,
+        "MOUTH_STRETCH_RIGHT": 0.08,
+        "MOUTH_ROLL_LOWER": 0.11,
+        "MOUTH_SHRUG_UPPER": 0.18,
+        "MOUTH_SHRUG_LOWER": 0.25
+      }
+    },
+    {
+      "time": [
+        2.349
+      ],
+      "params": {
+        "reset": true
+      }
+    }
+  ]
+}
