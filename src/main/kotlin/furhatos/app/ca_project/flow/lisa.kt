@@ -6,13 +6,10 @@ import furhatos.app.ca_project.nlu.LisaSawThis
 import furhatos.app.ca_project.nlu.RequestAboutLisa
 import furhatos.app.ca_project.nlu.LisaDoll
 import furhatos.app.ca_project.setting.InterpersonalState
-import furhatos.flow.kotlin.State
-import furhatos.flow.kotlin.furhat
-import furhatos.flow.kotlin.onResponse
-import furhatos.flow.kotlin.state
+import furhatos.flow.kotlin.*
 
 
-val Lisa : State = state(Interaction) {
+val Lisa = partialState {
 
     onResponse<LisaSawThis>{
 

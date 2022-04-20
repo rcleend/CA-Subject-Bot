@@ -5,13 +5,10 @@ import furhatos.app.ca_project.models.*
 import furhatos.app.ca_project.nlu.RequestAboutHomework
 import furhatos.app.ca_project.nlu.FriendsMatch
 import furhatos.app.ca_project.setting.InterpersonalState
-import furhatos.flow.kotlin.State
-import furhatos.flow.kotlin.furhat
-import furhatos.flow.kotlin.onResponse
-import furhatos.flow.kotlin.state
+import furhatos.flow.kotlin.*
 
 
-val Bjorn : State = state(Interaction) {
+val Bjorn = partialState {
 
     onResponse<RequestAboutHomework>{
 

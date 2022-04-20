@@ -6,13 +6,10 @@ import furhatos.app.ca_project.nlu.RequestAboutAccident
 import furhatos.app.ca_project.nlu.RequestAboutNoise
 import furhatos.app.ca_project.nlu.RequestAboutCrash
 import furhatos.app.ca_project.setting.InterpersonalState
-import furhatos.flow.kotlin.State
-import furhatos.flow.kotlin.furhat
-import furhatos.flow.kotlin.onResponse
-import furhatos.flow.kotlin.state
+import furhatos.flow.kotlin.*
 
 
-val Accident : State = state(Interaction) {
+val Accident = partialState {
 
     onResponse<RequestAboutAccident>{
 

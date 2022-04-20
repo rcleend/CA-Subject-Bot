@@ -4,13 +4,10 @@ import furhatos.app.ca_project.gestures.*
 import furhatos.app.ca_project.models.*
 import furhatos.app.ca_project.nlu.QuestionNotCoded
 import furhatos.app.ca_project.setting.InterpersonalState
-import furhatos.flow.kotlin.State
-import furhatos.flow.kotlin.furhat
-import furhatos.flow.kotlin.onResponse
-import furhatos.flow.kotlin.state
+import furhatos.flow.kotlin.*
 
 
-val Generic : State = state(Interaction) {
+val Generic = partialState {
 
     onResponse<QuestionNotCoded>{
 

@@ -1,11 +1,11 @@
-package furhatos.app.ca_project.nlu
+package furhatos.app.ca_project.nlu.intents
 
 import furhatos.nlu.Intent
 import furhatos.util.Language
 
 
 // Accident Intents
-class Training(): Intent() {
+class RequestAboutAccident(): Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf(
             "",
@@ -14,7 +14,7 @@ class Training(): Intent() {
     }
 }
 
-class WhyThoseClothes(): Intent() {
+class RequestAboutNoise(): Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf(
             "",
@@ -23,10 +23,9 @@ class WhyThoseClothes(): Intent() {
     }
 }
 
-class WhatAreYouWearing(): Intent() {
+class RequestAboutCrash(): Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf(
-            "What are you wearing?",
             "",
             ""
         )

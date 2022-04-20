@@ -6,13 +6,10 @@ import furhatos.app.ca_project.nlu.Training
 import furhatos.app.ca_project.nlu.WhyThoseClothes
 import furhatos.app.ca_project.nlu.WhatAreYouWearing
 import furhatos.app.ca_project.setting.InterpersonalState
-import furhatos.flow.kotlin.State
-import furhatos.flow.kotlin.furhat
-import furhatos.flow.kotlin.onResponse
-import furhatos.flow.kotlin.state
+import furhatos.flow.kotlin.*
 
 
-val Soccer : State = state(Interaction) {
+val Soccer = partialState {
 
     onResponse<Training>{
 

@@ -4,13 +4,10 @@ import furhatos.app.ca_project.gestures.*
 import furhatos.app.ca_project.models.*
 import furhatos.app.ca_project.nlu.KnowBallColor
 import furhatos.app.ca_project.setting.InterpersonalState
-import furhatos.flow.kotlin.State
-import furhatos.flow.kotlin.furhat
-import furhatos.flow.kotlin.onResponse
-import furhatos.flow.kotlin.state
+import furhatos.flow.kotlin.*
 
 
-val Ball : State = state(Interaction) {
+val Ball = partialState {
 
     onResponse<KnowBallColor>{
 

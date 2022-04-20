@@ -1,4 +1,4 @@
-package furhatos.app.ca_project.nlu
+package furhatos.app.ca_project.nlu.intents
 
 import furhatos.nlu.Intent
 import furhatos.util.Language

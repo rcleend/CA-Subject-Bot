@@ -6,7 +6,7 @@ import furhatos.flow.kotlin.*
 
 class SubjectSkill : Skill() {
     override fun start() {
-        Flow().run(Start)
+        Flow().run(Idle)
     }
 }
 
