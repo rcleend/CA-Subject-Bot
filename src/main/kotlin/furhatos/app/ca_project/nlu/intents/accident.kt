@@ -59,20 +59,21 @@ class RequestAboutNoise(
     }
 }
 
-//The intent was commented to prevent misunderstandings
-//class RequestAboutCrash(val broke: BreakEntity? = null): Intent() {
-//    override fun getExamples(lang: Language): List<String> {
-//        return listOf(
-//            "@broke the window by throwing the ball",
-//            "@broke my window with the ball",
-//            "window @broke with the ball",
-//            "did you @broke the window with the ball",
-//            "did you throw the ball",
-//            "why did you throw the ball",
-//            "the ball"
-//        )
-//    }
-//}
+/* The intent was commented to prevent misunderstandings
+class RequestAboutCrash(val broke: BreakEntity? = null): Intent() {
+    override fun getExamples(lang: Language): List<String> {
+        return listOf(
+            "@broke the window by throwing the ball",
+            "@broke my window with the ball",
+            "window @broke with the ball",
+            "did you @broke the window with the ball",
+            "did you throw the ball",
+            "why did you throw the ball",
+            "the ball"
+        )
+    }
+}
+*/
 
 class ExplainAccident(val broke: BreakEntity? = null): Intent() {
     override fun getExamples(lang: Language): List<String> {

@@ -62,31 +62,32 @@ val Accident = partialState {
         reentry()
     }
 
-//The table was commented to prevent misunderstandings
-//    onResponse<RequestAboutCrash>{
-//
-//        InterpersonalState.update(QuestionFrame(it.text.toString(), false))
-//
-//        val rf = ResponseFrame(arrayOf(
-//            ResponseValues(RuleDimensions.X2Y2.get(), X2Y2, "I did it, but I swear it was an accident! Please, forgive me.", Finished),
-//            ResponseValues(RuleDimensions.X2Y1.get(), X2Y1, "Why should I have done it?"),
-//            ResponseValues(RuleDimensions.X2Y0.get(), X2Y0, "I lost my ball yesterday, but my dad said he'll buy me a new one. Yuppy!"),
-//            ResponseValues(RuleDimensions.X1Y2.get(), X1Y2, "Lol. The crash sound was funny, though.", Finished),
-//            ResponseValues(RuleDimensions.X1Y1.get(), X1Y1, "That ball is not mine! I never saw it."),
-//            ResponseValues(RuleDimensions.X1Y0.get(), X1Y0, "What red ball?"),
-//            ResponseValues(RuleDimensions.X0Y2.get(), X0Y2, "I did it because I hate you!", Finished),
-//            ResponseValues(RuleDimensions.X0Y1.get(), X0Y1, "I didn't break your window with that red soccer ball!!"),
-//            ResponseValues(RuleDimensions.X0Y0.get(), X0Y0, "How could I? I'm into rowing now, don't you know?")
-//        ))
-//
-//        val (gesture, response, state) = rf.getResponse()
-//        furhat.gesture(gesture, async = true)
-//        furhat.say(response)
-//
-//        if (state != null) goto(state)
-//
-//        reentry()
-//    }
+    /* The table was commented to prevent misunderstandings
+    onResponse<RequestAboutCrash>{
+
+        InterpersonalState.update(QuestionFrame(it.text.toString(), false))
+
+        val rf = ResponseFrame(arrayOf(
+            ResponseValues(RuleDimensions.X2Y2.get(), X2Y2, "I did it, but I swear it was an accident! Please, forgive me.", Finished),
+            ResponseValues(RuleDimensions.X2Y1.get(), X2Y1, "Why should I have done it?"),
+            ResponseValues(RuleDimensions.X2Y0.get(), X2Y0, "I lost my ball yesterday, but my dad said he'll buy me a new one. Yuppy!"),
+            ResponseValues(RuleDimensions.X1Y2.get(), X1Y2, "Lol. The crash sound was funny, though.", Finished),
+            ResponseValues(RuleDimensions.X1Y1.get(), X1Y1, "That ball is not mine! I never saw it."),
+            ResponseValues(RuleDimensions.X1Y0.get(), X1Y0, "What red ball?"),
+            ResponseValues(RuleDimensions.X0Y2.get(), X0Y2, "I did it because I hate you!", Finished),
+            ResponseValues(RuleDimensions.X0Y1.get(), X0Y1, "I didn't break your window with that red soccer ball!!"),
+            ResponseValues(RuleDimensions.X0Y0.get(), X0Y0, "How could I? I'm into rowing now, don't you know?")
+        ))
+
+        val (gesture, response, state) = rf.getResponse()
+        furhat.gesture(gesture, async = true)
+        furhat.say(response)
+
+        if (state != null) goto(state)
+
+        reentry()
+    }
+    */
 
     onResponse<ExplainAccident> {
         furhat.say("Oh. I'm sorry to hear that, but I don't know anything about it")

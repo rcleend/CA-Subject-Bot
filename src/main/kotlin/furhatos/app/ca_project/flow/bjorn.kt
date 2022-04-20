@@ -3,7 +3,7 @@ package furhatos.app.ca_project.flow
 import furhatos.app.ca_project.gestures.*
 import furhatos.app.ca_project.models.*
 import furhatos.app.ca_project.nlu.intents.RequestAboutHomework
-import furhatos.app.ca_project.nlu.intents.FriendsMatch
+//import furhatos.app.ca_project.nlu.intents.FriendsMatch
 import furhatos.app.ca_project.nlu.intents.HowAreYouDoing
 import furhatos.app.ca_project.nlu.intents.Truthful
 import furhatos.app.ca_project.setting.InterpersonalState
@@ -37,7 +37,7 @@ val Bjorn = partialState {
         reentry()
     }
 
-
+    /* The table was removed to
     onResponse<FriendsMatch>{
 
         InterpersonalState.update(QuestionFrame(it.text.toString(), false))
@@ -62,6 +62,7 @@ val Bjorn = partialState {
 
         reentry()
     }
+    */
 
     onResponse<HowAreYouDoing>{
 
@@ -97,7 +98,7 @@ val Bjorn = partialState {
             ResponseValues(RuleDimensions.X2Y2.get(), X2Y2, "My mother say that lying is wrong... You're right, it was me who broke the window.", Finished),
             ResponseValues(RuleDimensions.X2Y1.get(), X2Y1, "My mom say that lying is wrong... I might be involved in the accident...", Finished),
             ResponseValues(RuleDimensions.X2Y0.get(), X2Y0, "I like to tell the truth."),
-            ResponseValues(RuleDimensions.X1Y2.get(), X1Y2, "The truth is that I broke your window kicking the ball. I'm so sorry!", Finished),
+            ResponseValues(RuleDimensions.X1Y2.get(), X1Y2, "Mom always say that lying is bad... I broke your window with the ball. I'm so sorry!", Finished),
             ResponseValues(RuleDimensions.X1Y1.get(), X1Y1, "My mother say that lying is wrong... but what does she know about that? Sometimes is scary..."),
             ResponseValues(RuleDimensions.X1Y0.get(), X1Y0, "I speak the truth, I never lie."),
             ResponseValues(RuleDimensions.X0Y2.get(), X0Y2, "Mom always say that lying is bad, but telling the truth sometimes is not easy."),

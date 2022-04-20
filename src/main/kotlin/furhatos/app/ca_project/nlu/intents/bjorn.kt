@@ -16,7 +16,7 @@ class RequestAboutHomework(): Intent() {
     }
 }
 
-
+/* The intent was commented to prevent misunderstandings
 class FriendsMatch (): Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf(
@@ -30,6 +30,7 @@ class FriendsMatch (): Intent() {
         )
     }
 }
+*/
 
 
 class HowAreYouDoing (): Intent() {
