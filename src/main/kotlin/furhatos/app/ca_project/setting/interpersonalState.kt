@@ -4,8 +4,8 @@ import furhatos.app.ca_project.models.*
 
 object InterpersonalState {
     private val _personalityDims: HashMap<PersonalityDimTypes, PersonalityDim> = hashMapOf(
-        PersonalityDimTypes.HAPPINESS to HappinessDim(0.70),
-        PersonalityDimTypes.TRUTHFULNESS to TruthfulnessDim(0.80)
+        PersonalityDimTypes.HAPPINESS to HappinessDim(0.40),
+        PersonalityDimTypes.TRUTHFULNESS to TruthfulnessDim(0.40)
     )
     val personalityDims get() = this._personalityDims
 

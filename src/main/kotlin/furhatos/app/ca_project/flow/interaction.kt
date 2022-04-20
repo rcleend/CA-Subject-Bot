@@ -2,9 +2,9 @@ package furhatos.app.ca_project.flow
 
 import furhatos.app.ca_project.gestures.*
 import furhatos.app.ca_project.models.*
-import furhatos.app.ca_project.nlu.LisaSawThis
-import furhatos.app.ca_project.nlu.RequestAboutLisa
-import furhatos.app.ca_project.nlu.LisaDoll
+import furhatos.app.ca_project.nlu.intents.LisaSawThis
+import furhatos.app.ca_project.nlu.intents.RequestAboutLisa
+import furhatos.app.ca_project.nlu.intents.LisaDoll
 import furhatos.app.ca_project.setting.InterpersonalState
 import furhatos.flow.kotlin.*
 
@@ -87,7 +87,7 @@ val Start = partialState {
 
         if (state != null) goto(state)
 
-        goto(Idle)
+        reentry()
     }
 
 }

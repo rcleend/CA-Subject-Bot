@@ -2,8 +2,9 @@ package furhatos.app.ca_project.flow
 
 import furhatos.app.ca_project.gestures.*
 import furhatos.app.ca_project.models.*
-import furhatos.app.ca_project.nlu.RequestAboutHomework
-import furhatos.app.ca_project.nlu.FriendsMatch
+import furhatos.app.ca_project.nlu.intents.RequestAboutHomework
+import furhatos.app.ca_project.nlu.intents.FriendsMatch
+import furhatos.app.ca_project.nlu.intents.HowAreYouDoing
 import furhatos.app.ca_project.setting.InterpersonalState
 import furhatos.flow.kotlin.*
 
@@ -32,7 +33,7 @@ val Bjorn = partialState {
 
         if (state != null) goto(state)
 
-        goto(Idle)
+        reentry()
     }
 
 
@@ -58,7 +59,32 @@ val Bjorn = partialState {
 
         if (state != null) goto(state)
 
-        goto(Idle)
+        reentry()
+    }
+
+    onResponse<HowAreYouDoing>{
+
+        InterpersonalState.update(QuestionFrame(it.text.toString(), false))
+
+        val rf = ResponseFrame(arrayOf(
+            ResponseValues(RuleDimensions.X2Y2.get(), X2Y2, "I'm fine..."),
+            ResponseValues(RuleDimensions.X2Y1.get(), X2Y1, "I'm doing good."),
+            ResponseValues(RuleDimensions.X2Y0.get(), X2Y0, "Meh, it's a good day after all."),
+            ResponseValues(RuleDimensions.X1Y2.get(), X1Y2, "Not that good..."),
+            ResponseValues(RuleDimensions.X1Y1.get(), X1Y1, "I'm ok, thanks."),
+            ResponseValues(RuleDimensions.X1Y0.get(), X1Y0, "I'm great!"),
+            ResponseValues(RuleDimensions.X0Y2.get(), X0Y2, "I'm... I'm... uhmm... ok..."),
+            ResponseValues(RuleDimensions.X0Y1.get(), X0Y1, "I'm ok..."),
+            ResponseValues(RuleDimensions.X0Y0.get(), X0Y0, "I'm good...")
+        ))
+
+        val (gesture, response, state) = rf.getResponse()
+        furhat.gesture(gesture, async = true)
+        furhat.say(response)
+
+        if (state != null) goto(state)
+
+        reentry()
     }
 
 }

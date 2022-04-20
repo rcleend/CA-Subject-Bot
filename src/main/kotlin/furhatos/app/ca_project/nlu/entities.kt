@@ -15,3 +15,21 @@ class LisaNameEntity : EnumEntity() {
         return listOf("lisa", "liza")
     }
 }
+
+class NoiseNamesEntity : EnumEntity() {
+    override fun getEnum(lang: Language): List<String> {
+        return listOf("noise", "sound", "crash", "clash", "tumult")
+    }
+}
+
+class ClothingEntity : EnumEntity() {
+    override fun getEnum(lang: Language): List<String> {
+        return listOf("pants", "shirt", "socks", "jeans", "shorts")
+    }
+}
+
+class BreakEntity: EnumEntity() {
+    override fun getEnum(lang: Language): List<String> {
+        return listOf("break", "crash", "smashed", "cracked", "go through", "destroyed", "broken", "broke")
+    }
+}

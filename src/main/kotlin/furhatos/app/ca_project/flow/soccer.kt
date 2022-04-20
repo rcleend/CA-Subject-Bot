@@ -2,9 +2,9 @@ package furhatos.app.ca_project.flow
 
 import furhatos.app.ca_project.gestures.*
 import furhatos.app.ca_project.models.*
-import furhatos.app.ca_project.nlu.Training
-import furhatos.app.ca_project.nlu.WhyThoseClothes
-import furhatos.app.ca_project.nlu.WhatAreYouWearing
+import furhatos.app.ca_project.nlu.intents.Training
+import furhatos.app.ca_project.nlu.intents.WhyThoseClothes
+import furhatos.app.ca_project.nlu.intents.WhatAreYouWearing
 import furhatos.app.ca_project.setting.InterpersonalState
 import furhatos.flow.kotlin.*
 
@@ -59,7 +59,7 @@ val Soccer = partialState {
 
         if (state != null) goto(state)
 
-        goto(Idle)
+        reentry()
     }
 
 
@@ -85,6 +85,6 @@ val Soccer = partialState {
 
         if (state != null) goto(state)
 
-        goto(Idle)
+        reentry()
     }
 }

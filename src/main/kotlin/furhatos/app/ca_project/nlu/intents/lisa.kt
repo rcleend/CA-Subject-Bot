@@ -13,14 +13,16 @@ class RequestAboutLisa(val name: LisaNameEntity? = null,
 ): Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf(
-            "could you please tell me about @name",
+            "tell me @filler about @name",
+            "tell me about @filler @name",
             "what can you tell me about @name",
             "tell me about @name",
             "do you know @name",
             "have you seen @name",
             "could you please tell me if you know @name",
             "where do you know @name from",
-            "who is @filler on the stairs"
+            "who is @filler on the stairs",
+            "could you explain why @name"
         )
     }
 }
@@ -30,23 +32,35 @@ class LisaSawThis (val name: LisaNameEntity? = null,
                    val topic: LisaSawEntity? = null,
                    val filler: FillerEntityLisaSaw? = null
 ): Intent() {
+
     override fun getExamples(lang: Language): List<String> {
         return listOf(
             "@name told me you @topic",
             "@name saw you @filler outside",
             "@name saw you @filler ball",
-            "she saw you @filler"
+            "she saw you @filler",
+            "saw what you did",
+            "@name saw what you did",
+            "you have been seen by @name",
+            "betrayed you"
         )
     }
 }
 
-
-class LisaDoll (val name: LisaNameEntity? = null, val topic: LisaSawEntity? = null): Intent() {
+class LisaDoll (val name: LisaNameEntity? = null,
+                val topic: LisaSawEntity? = null,
+                val filler: FillerEntityRequest? = null
+): Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf(
             "about @name's doll",
             "@name playing with",
-            "like @name doll"
+            "do you like @name doll",
+            "like @name doll",
+            "doll",
+            "what do you think about @filler doll",
+            "how does the doll make you feel",
+            "how @filler doll"
         )
     }
 }
